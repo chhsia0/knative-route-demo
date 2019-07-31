@@ -16,7 +16,7 @@ const (
 
 var (
 	logger  = log.New(os.Stdout, "[ttv] ", log.Lshortfile|log.Ldate|log.Ltime)
-	version = os.Getenv("T_VERSION")
+	version = "green"
 )
 
 func main() {
