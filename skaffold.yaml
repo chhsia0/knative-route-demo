@@ -2,9 +2,9 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: chhsia0/knative-route-demo
+  - image: chhsiao/knative-route-demo
     context: .
-    docker: {}
+    docker: Dockerfile
   tagPolicy:
     envTemplate:
       template: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}:{{.VERSION}}'
