@@ -1,0 +1,41 @@
+Step: step-credential-initializer-jsk5z:
+
+{"level":"warn","ts":1565671858.671989,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565671858.6731288,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-lm8cl:
+
+{"level":"warn","ts":1565671859.7652113,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565671859.766275,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-*******-knative-route-demo-2msc4:
+
+{"level":"warn","ts":1565671866.8070729,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565671867.031605,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*******/knative-route-demo.git @ a9696d03bc912ef9858458cc7ac88a32c315283b in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:a9696d03bc912ef9858458cc7ac88a32c315283b","time":"2019-08-13T04:51:07Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-13T04:51:07Z"}
+Step: step-merge-pull-refs:
+
+SKIP merge-pull-refs: Nothing to merge
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-13T04:51:08Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-13T04:51:08Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-release-effective.yml","time":"2019-08-13T04:51:10Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"running command: echo \\$(**-release-version) \u003e VERSION","time":"2019-08-13T04:51:10Z"}
+{"level":"info","msg":"","time":"2019-08-13T04:51:11Z"}
+{"level":"info","msg":"running command: ** step tag --version \\$(cat VERSION)","time":"2019-08-13T04:51:11Z"}
+{"level":"info","msg":"Tag v0.0.5 created and pushed to remote origin","time":"2019-08-13T04:51:15Z"}
+{"level":"info","msg":"","time":"2019-08-13T04:51:15Z"}
+{"level":"warning","msg":"failed to find secret kaniko-secret in namespace **: secrets \"kaniko-secret\" not found","time":"2019-08-13T04:51:15Z"}
+{"level":"info","msg":"PipelineActivity for *******-knative-route-demo-master-5","time":"2019-08-13T04:51:15Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-13T04:51:15Z"}
+{"level":"info","msg":"upserted PipelineResource *******-knative-route-demo-mast for the git repository https://github.com/*******/knative-route-demo.git and branch master","time":"2019-08-13T04:51:15Z"}
+{"level":"info","msg":"upserted Task *******-knative-route-demo-mast-lpb9p-from-build-pack-5","time":"2019-08-13T04:51:15Z"}
+{"level":"info","msg":"upserted Pipeline *******-knative-route-demo-mast-lpb9p-5","time":"2019-08-13T04:51:15Z"}
+{"level":"info","msg":"created PipelineRun *******-knative-route-demo-mast-lpb9p-5","time":"2019-08-13T04:51:15Z"}
+{"level":"info","msg":"created PipelineStructure *******-knative-route-demo-mast-lpb9p-5","time":"2019-08-13T04:51:15Z"}
