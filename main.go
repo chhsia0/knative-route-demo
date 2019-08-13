@@ -11,7 +11,7 @@ import (
 
 const (
 	defaultServerPort = 8080
-	newVersionCode    = "green"
+	newVersionCode    = "blue"
 )
 
 var (
