@@ -1,0 +1,33 @@
+Step: step-credential-initializer-lqnqf:
+
+{"level":"warn","ts":1565671330.666152,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565671330.6669712,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-wr87v:
+
+{"level":"warn","ts":1565671331.9701319,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565671331.9714773,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/knative-route-demo\""}
+Step: step-place-tools:
+
+Step: step-git-source-*******-knative-route-demo-mast-rtzb6:
+
+{"level":"warn","ts":1565671339.9980707,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565671340.2354927,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*******/knative-route-demo.git @ v0.0.4 in path /workspace/source"}
+Step: step-git-merge:
+
+WARNING: no SHAs to merge, falling back to initial cloned commit
+Step: step-setup-**-git-credentials:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: step-build-make-build:
+
+make: *** No rule to make target `build'.  Stop.
+Step: step-build-container-build:
+
+Step: step-build-post-build:
+
+Step: step-promote-changelog:
+
+Step: step-promote-helm-release:
+
+Step: step-promote-**-promote:
+
