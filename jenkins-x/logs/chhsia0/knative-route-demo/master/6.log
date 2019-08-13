@@ -1,0 +1,43 @@
+Step: step-credential-initializer-rx2rf:
+
+{"level":"warn","ts":1565676631.5646827,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565676631.565926,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-k9x26:
+
+{"level":"warn","ts":1565676632.636895,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565676632.6381187,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/knative-route-demo\""}
+Step: step-place-tools:
+
+Step: step-git-source-*******-knative-route-demo-mast-zlz7l:
+
+{"level":"warn","ts":1565676640.7088592,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565676640.92204,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*******/knative-route-demo.git @ v0.0.6 in path /workspace/source"}
+Step: step-git-merge:
+
+WARNING: no SHAs to merge, falling back to initial cloned commit
+Step: step-setup-**-git-credentials:
+
+Generated Git credentials file /workspace/xdg_config/git/credentials
+Step: step-build-make-build:
+
+go build -v -o ./bin/knative-route-demo
+server.go:9:2: cannot find package "github.com/gin-gonic/gin" in any of:
+	/usr/local/go/src/github.com/gin-gonic/gin (from $GOROOT)
+	/home/jenkins/go/src/github.com/gin-gonic/gin (from $GOPATH)
+server.go:10:2: cannot find package "github.com/gorilla/handlers" in any of:
+	/usr/local/go/src/github.com/gorilla/handlers (from $GOROOT)
+	/home/jenkins/go/src/github.com/gorilla/handlers (from $GOPATH)
+main.go:9:2: cannot find package "golang.org/x/net/context" in any of:
+	/usr/local/go/src/golang.org/x/net/context (from $GOROOT)
+	/home/jenkins/go/src/golang.org/x/net/context (from $GOPATH)
+make: *** [build] Error 1
+Step: step-build-container-build:
+
+Step: step-build-post-build:
+
+Step: step-promote-changelog:
+
+Step: step-promote-helm-release:
+
+Step: step-promote-**-promote:
+
