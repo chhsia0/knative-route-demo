@@ -11,8 +11,7 @@ resource "knative-demo-image": {
   param digest: "$(inputs.resources.knative-demo-image.digest)"
 }
 
-// TODO(chhsiao): Design syntax to use catalog instead:
-// https://github.com/tektoncd/catalog/tree/master/kaniko
+
 task "source-to-image": {
   inputs: ["knative-demo-git"]
   outputs: ["knative-demo-image"]
