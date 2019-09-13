@@ -31,7 +31,7 @@ task "source-to-image": {
           name: "DOCKER_CONFIG",
           value: "/builder/home/.docker"
         }
-      ]
+      ],
     }
   ]
 }
