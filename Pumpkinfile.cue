@@ -1,7 +1,7 @@
 resource "knative-demo-git": {
   type: "git"
-  param url: "$(context.git-url)"
-  param revision: "$(context.git-revision)"
+  param url: "https://github.com/chhsia0/knative-route-demo.git"
+  param revision: "master"
 }
 
 resource "knative-demo-image": {
@@ -10,6 +10,7 @@ resource "knative-demo-image": {
   // TODO(chhsiao): The interpolation syntax should be auto-injected.
   param digest: "$(inputs.resources.knative-demo-image.digest)"
 }
+
 
 task "source-to-image": {
   inputs: ["knative-demo-git"]
@@ -48,7 +49,6 @@ actions: [
   },
   {
     tasks: ["run-test-binary"]
-    on pull_request_comment branches: ["master"]
-    on pull_request_comment pattern: "^/run-test$"
+    on pull_request branch: ["master"]
   }
 ]
