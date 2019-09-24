@@ -34,7 +34,7 @@ task "run-test-binary": {
   steps: [
     {
       name: "run-test"
-      image: "\(resource["knative-demo-image"].param.url)@\(resource["knative-demo-image"].param.digest)"
+      image: "$(inputs.resources.knative-demo-image.url)@$(inputs.resources.knative-demo-image.digest)"
       workingDir: "/"
       command: ["/knative-route-demo.test"]
     }
