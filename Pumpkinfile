@@ -1,7 +1,7 @@
 resource "knative-demo-git": {
   type: "git"
-  param url: "$(context.git-url)"
-  param revision: "$(context.git-revision)"
+  param url: "$(context.git.url)"
+  param revision: "$(context.git.revision)"
 }
 
 resource "knative-demo-image": {
