@@ -7,8 +7,6 @@ resource "knative-demo-git": {
 resource "knative-demo-image": {
   type: "image"
   param url: "docker.io/chhsiao/knative-route-demo"
-  // TODO(chhsiao): The interpolation syntax should be auto-injected.
-  param digest: "$(inputs.resources.knative-demo-image.digest)"
 }
 
 task "source-to-image": {
@@ -20,7 +18,7 @@ task "source-to-image": {
       name: "build-and-push"
       image: "chhsiao/kaniko-executor"
       args: [
-        "--destination=\(resource["knative-demo-image"].param.url)",
+        "--destination=$(outputs.resources.knative-demo-image.url)",
         "--context=/workspace/knative-demo-git",
         "--oci-layout-path=/builder/home/image-outputs/knative-demo-image"
       ]
